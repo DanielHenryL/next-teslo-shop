@@ -1,9 +1,12 @@
+import { ShopLayout } from "@/components/layouts";
+import { Typography } from "@mui/material";
 
 
 export default function Home() {
   return (
-    <>
-      <h1>Hola mundo</h1>
-    </>
+    <ShopLayout title={"Teslo-App - Home"} pageDescription={"Encuentra los mejores productos en Teslo-App"}>
+      <Typography variant="h1" component={'h1'}>Tienda</Typography>
+      <Typography variant="h2" sx={{ mb:1 }}>Todos los productos</Typography>
+    </ShopLayout>
   )
 }

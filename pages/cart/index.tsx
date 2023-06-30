@@ -1,7 +1,6 @@
-import { CardList } from '@/components/cart'
+import { CardList, OrderSummary } from '@/components/cart'
 import { ShopLayout } from '@/components/layouts'
 import { Box, Button, Card, CardContent, Divider, Grid, Typography } from '@mui/material'
-import React from 'react'
 
 const CardPage = () => {
   return (
@@ -10,7 +9,7 @@ const CardPage = () => {
         <Grid container sx={{ mt:2}} flexDirection={{ xs:'column-reverse',sm:'row'}} >
 
             <Grid item xs={12} sm={7} sx={{ my:2}}>
-                <CardList />
+                <CardList editable />
             </Grid>
 
             <Grid item xs={12} sm={5} sx={{ my:2}}>
@@ -18,7 +17,7 @@ const CardPage = () => {
                     <CardContent>
                         <Typography variant='h2'>Orden</Typography>
                         <Divider sx={{ my:1}}/>
-                        {/* Order sumary */}
+                        <OrderSummary />
                         <Box sx={{ mt:3}}>
                             <Button color='secondary' className='circular-btn' fullWidth>
                                 Checkout

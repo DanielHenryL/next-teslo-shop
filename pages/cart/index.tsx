@@ -7,11 +7,13 @@ const CardPage = () => {
   return (
     <ShopLayout title='Carrito-3' pageDescription={'Carrito de compras de la tienda'}>
         <Typography variant='h1' component={'h1'}>Carrito</Typography>
-        <Grid container>
-            <Grid item xs={12} sm={7}>
+        <Grid container sx={{ mt:2}} flexDirection={{ xs:'column-reverse',sm:'row'}} >
+
+            <Grid item xs={12} sm={7} sx={{ my:2}}>
                 <CardList />
             </Grid>
-            <Grid item xs={12} sm={5}>
+
+            <Grid item xs={12} sm={5} sx={{ my:2}}>
                 <Card className='summary-card'>
                     <CardContent>
                         <Typography variant='h2'>Orden</Typography>
@@ -26,6 +28,7 @@ const CardPage = () => {
                     </CardContent>
                 </Card>
             </Grid>
+
         </Grid>
     </ShopLayout>
   )
